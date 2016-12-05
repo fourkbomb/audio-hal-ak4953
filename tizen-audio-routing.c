@@ -61,7 +61,7 @@ static uint32_t __convert_device_string_to_enum(const char* device_str, uint32_t
         device = AUDIO_DEVICE_OUT_RECEIVER;
     } else if ((!strncmp(device_str, "audio-jack", MAX_NAME_LEN)) && (direction == AUDIO_DIRECTION_OUT)) {
         device = AUDIO_DEVICE_OUT_JACK;
-    } else if ((!strncmp(device_str, "bt", MAX_NAME_LEN)) && (direction == AUDIO_DIRECTION_OUT)) {
+    } else if ((!strncmp(device_str, "bt-sco", MAX_NAME_LEN)) && (direction == AUDIO_DIRECTION_OUT)) {
         device = AUDIO_DEVICE_OUT_BT_SCO;
     } else if (!strncmp(device_str, "aux", MAX_NAME_LEN)) {
         device = AUDIO_DEVICE_OUT_AUX;
@@ -71,7 +71,7 @@ static uint32_t __convert_device_string_to_enum(const char* device_str, uint32_t
         device = AUDIO_DEVICE_IN_MAIN_MIC;
     } else if ((!strncmp(device_str, "audio-jack", MAX_NAME_LEN)) && (direction == AUDIO_DIRECTION_IN)) {
         device = AUDIO_DEVICE_IN_JACK;
-    } else if ((!strncmp(device_str, "bt", MAX_NAME_LEN)) && (direction == AUDIO_DIRECTION_IN)) {
+    } else if ((!strncmp(device_str, "bt-sco", MAX_NAME_LEN)) && (direction == AUDIO_DIRECTION_IN)) {
         device = AUDIO_DEVICE_IN_BT_SCO;
     } else {
         device = AUDIO_DEVICE_NONE;
